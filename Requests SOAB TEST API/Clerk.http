@@ -1,0 +1,94 @@
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/clerk HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://clerks.models/">
+    <soap:Body>
+        <x:getClerks>
+        </x:getClerks>
+    </soap:Body>
+</soap:Envelope>
+
+################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/clerk HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://clerks.models/">
+    <soap:Body>
+        <x:getClerkByName>
+            <arg0>fawzi</arg0>
+        </x:getClerkByName>
+    </soap:Body>
+</soap:Envelope>
+
+################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/clerk HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://clerks.models/">
+    <soap:Body>
+        <x:getClerkById>
+            <arg0>1</arg0>
+        </x:getClerkById>
+    </soap:Body>
+</soap:Envelope>
+
+############
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/clerk HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://clerks.models/">
+    <soap:Body>
+        <x:addClerk>
+            <arg0>
+                <email>lolo@gmail.com</email>
+                <name>lolo</name>
+                <password>9999</password>
+            </arg0>
+        </x:addClerk>
+    </soap:Body>
+</soap:Envelope>
+
+#################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/clerk HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://clerks.models/">
+    <soap:Body>
+        <x:updateClerk>
+            <arg0>
+                <email>ali_ali@gmail.com</email>
+                <id>52</id>
+                <name>alialiali</name>
+            </arg0>
+        </x:updateClerk>
+    </soap:Body>
+</soap:Envelope>
+
+#############
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/clerk HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://clerks.models/">
+    <soap:Body>
+        <x:deleteClerk>
+            <arg0>52</arg0>
+        </x:deleteClerk>
+    </soap:Body>
+</soap:Envelope>

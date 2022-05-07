@@ -1,0 +1,77 @@
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/category HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://category.models/">
+    <soap:Body>
+        <x:getCategories>
+        </x:getCategories>
+    </soap:Body>
+</soap:Envelope>
+
+#################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/category HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://category.models/">
+    <soap:Body>
+        <x:getCategoryById>
+            <arg0>5</arg0>
+        </x:getCategoryById>
+    </soap:Body>
+</soap:Envelope>
+
+############
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/category HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://category.models/">
+    <soap:Body>
+        <x:deleteCategory>
+            <arg0>5</arg0>
+        </x:deleteCategory>
+    </soap:Body>
+</soap:Envelope>
+
+#############
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/category HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://category.models/">
+    <soap:Body>
+        <x:getCategoryByName>
+            <arg0>food new</arg0>
+        </x:getCategoryByName>
+    </soap:Body>
+</soap:Envelope>
+
+
+#############
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/category HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://category.models/">
+    <soap:Body>
+        <x:updateCategory>
+            <arg0>
+                <description>update</description>
+                <id>6</id>
+                <name>update new</name>
+            </arg0>
+        </x:updateCategory>
+    </soap:Body>
+</soap:Envelope>
+
+###############

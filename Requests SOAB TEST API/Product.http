@@ -1,0 +1,139 @@
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/product HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://products.models/">
+    <soap:Body>
+        <x:getAllProducts>
+        </x:getAllProducts>
+    </soap:Body>
+</soap:Envelope>
+
+################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/product HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://products.models/">
+    <soap:Body>
+        <x:getProductById>
+            <arg0>1</arg0>
+        </x:getProductById>
+    </soap:Body>
+</soap:Envelope>
+
+
+################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/product HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://products.models/">
+    <soap:Body>
+        <x:createProduct>
+            <arg0>
+                <categoryname>foods</categoryname>
+                <clerkName>fawzi</clerkName>
+                <price>90</price>
+                <productDesc>male Mack</productDesc>
+                <productName>big mack</productName>
+                <quntity>90</quntity>
+            </arg0>
+        </x:createProduct>
+    </soap:Body>
+</soap:Envelope>
+
+############
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/product HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://products.models/">
+    <soap:Body>
+        <x:getProductById>
+            <arg0>1</arg0>
+        </x:getProductById>
+    </soap:Body>
+</soap:Envelope>
+
+################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/product HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://products.models/">
+    <soap:Body>
+        <x:deleteProduct>
+            <arg0>15</arg0>
+        </x:deleteProduct>
+    </soap:Body>
+</soap:Envelope>
+
+###############
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/product HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://products.models/">
+    <soap:Body>
+        <x:getAllCategory>
+        </x:getAllCategory>
+    </soap:Body>
+</soap:Envelope>
+
+################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/product HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://products.models/">
+    <soap:Body>
+        <x:getCategory>
+            <arg0>12</arg0>
+        </x:getCategory>
+    </soap:Body>
+</soap:Envelope>
+
+################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/product HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://products.models/">
+    <soap:Body>
+        <x:editProduct>
+            <arg0>
+                <categories>
+                    <description></description>
+                    <id>12</id>
+                    <name></name>
+                </categories>
+                <clerk>
+                    <email></email>
+                    <id>3</id>
+                    <name></name>
+                </clerk>
+                <id>1</id>
+                <price>50000</price>
+                <productDesc>sofa for bed</productDesc>
+                <productName>sofa</productName>
+                <quntity>90</quntity>
+            </arg0>
+        </x:editProduct>
+    </soap:Body>
+</soap:Envelope>

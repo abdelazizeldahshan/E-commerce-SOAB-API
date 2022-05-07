@@ -1,0 +1,80 @@
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/admin HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://admin.models/">
+    <soap:Body>
+        <x:getAdmins>
+        </x:getAdmins>
+    </soap:Body>
+</soap:Envelope>
+
+##########
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/admin HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://admin.models/">
+    <soap:Body>
+        <x:deleteAdmin>
+            <arg0>51</arg0>
+        </x:deleteAdmin>
+    </soap:Body>
+</soap:Envelope>
+
+##########
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/admin HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://admin.models/">
+    <soap:Body>
+        <x:addAdmin>
+            <arg0>
+                <email>asd@hmail.com</email>
+                <name>asd</name>
+                <password>435</password>
+            </arg0>
+        </x:addAdmin>
+    </soap:Body>
+</soap:Envelope>
+
+################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/admin HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://admin.models/">
+    <soap:Body>
+        <x:getAdminById>
+            <arg0>4</arg0>
+        </x:getAdminById>
+    </soap:Body>
+</soap:Envelope>
+
+###################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/admin HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://admin.models/">
+    <soap:Body>
+        <x:updateAdmin>
+            <arg0>
+                <email>ziozizi@hmail.com</email>
+                <id>51</id>
+                <name>zizozizozioz</name>
+                <password>zizozizo123</password>
+            </arg0>
+        </x:updateAdmin>
+    </soap:Body>
+</soap:Envelope>

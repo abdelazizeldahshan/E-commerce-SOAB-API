@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is Metro/3.0.0 (RELEASE-3.0.0-73b54f1; 2020-11-18T18:54:01+0000) JAXWS-RI/3.0.0 JAXWS-API/3.0.0 JAXB-RI/3.0.0 JAXB-API/3.0.0 git-revision#unknown. --><xs:schema xmlns:tns="http://products.models/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://products.models/">
+
+<xs:element name="category" type="tns:category"/>
+
+<xs:element name="clerk" type="tns:clerk"/>
+
+<xs:element name="createProduct" type="tns:createProduct"/>
+
+<xs:element name="createProductResponse" type="tns:createProductResponse"/>
+
+<xs:element name="deleteProduct" type="tns:deleteProduct"/>
+
+<xs:element name="deleteProductResponse" type="tns:deleteProductResponse"/>
+
+<xs:element name="editProduct" type="tns:editProduct"/>
+
+<xs:element name="editProductResponse" type="tns:editProductResponse"/>
+
+<xs:element name="getAllCategory" type="tns:getAllCategory"/>
+
+<xs:element name="getAllCategoryResponse" type="tns:getAllCategoryResponse"/>
+
+<xs:element name="getAllProducts" type="tns:getAllProducts"/>
+
+<xs:element name="getAllProductsResponse" type="tns:getAllProductsResponse"/>
+
+<xs:element name="getCategory" type="tns:getCategory"/>
+
+<xs:element name="getCategoryResponse" type="tns:getCategoryResponse"/>
+
+<xs:element name="getProductById" type="tns:getProductById"/>
+
+<xs:element name="getProductByIdResponse" type="tns:getProductByIdResponse"/>
+
+<xs:element name="getSomeProducts" type="tns:getSomeProducts"/>
+
+<xs:element name="getSomeProductsResponse" type="tns:getSomeProductsResponse"/>
+
+<xs:element name="product" type="tns:product"/>
+
+<xs:element name="productPostRequest" type="tns:productPostRequest"/>
+
+<xs:element name="productPutRequest" type="tns:productPutRequest"/>
+
+<xs:complexType name="getAllProducts">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllProductsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:product" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="product">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="productName" type="xs:string" minOccurs="0"/>
+<xs:element name="productDesc" type="xs:string" minOccurs="0"/>
+<xs:element name="quntity" type="xs:int"/>
+<xs:element name="price" type="xs:double"/>
+<xs:element name="Categories" type="tns:category" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="clerkName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="category">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createProduct">
+<xs:sequence>
+<xs:element name="arg0" type="tns:productPostRequest" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productPostRequest">
+<xs:sequence>
+<xs:element name="categoryname" type="xs:string" minOccurs="0"/>
+<xs:element name="clerkName" type="xs:string" minOccurs="0"/>
+<xs:element name="price" type="xs:double"/>
+<xs:element name="productDesc" type="xs:string" minOccurs="0"/>
+<xs:element name="productName" type="xs:string" minOccurs="0"/>
+<xs:element name="quntity" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createProductResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSomeProducts">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSomeProductsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:product" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCategory">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCategoryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:category" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getProductById">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getProductByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:product" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editProduct">
+<xs:sequence>
+<xs:element name="arg0" type="tns:productPutRequest" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productPutRequest">
+<xs:sequence>
+<xs:element name="categories" type="tns:category" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="clerk" type="tns:clerk" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="price" type="xs:double"/>
+<xs:element name="productDesc" type="xs:string" minOccurs="0"/>
+<xs:element name="productName" type="xs:string" minOccurs="0"/>
+<xs:element name="quntity" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clerk">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editProductResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCategory">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllCategoryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:category" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteProduct">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteProductResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

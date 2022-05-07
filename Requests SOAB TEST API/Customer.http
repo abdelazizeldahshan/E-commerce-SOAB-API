@@ -1,0 +1,92 @@
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/customer HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://customer.models/">
+    <soap:Body>
+        <x:getCustomers>
+        </x:getCustomers>
+    </soap:Body>
+</soap:Envelope>
+
+
+#################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/customer HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://customer.models/">
+    <soap:Body>
+        <x:getCustomerById>
+            <arg0>49</arg0>
+        </x:getCustomerById>
+    </soap:Body>
+</soap:Envelope>
+
+
+#######################3
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/customer HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://customer.models/">
+    <soap:Body>
+        <x:signupCustomer>
+            <arg0>
+                <address>giza</address>
+                <creditLimit>10000</creditLimit>
+                <email>nono@yahoo.com</email>
+                <gender>male</gender>
+                <interst>foods</interst>
+                <jop>developer</jop>
+                <name>nonon</name>
+                <password>nono</password>
+            </arg0>
+        </x:signupCustomer>
+    </soap:Body>
+</soap:Envelope>
+
+
+###################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/customer HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://customer.models/">
+    <soap:Body>
+        <x:updateCustomer>
+            <arg0>
+                <address>gizagiza</address>
+                <creditLimit>878</creditLimit>
+                <email>slaam@yahoo.com</email>
+                <gender>male</gender>
+                <id>53</id>
+                <interst>mack</interst>
+                <jop>enterpuenurer</jop>
+                <name>slaam</name>
+            </arg0>
+        </x:updateCustomer>
+    </soap:Body>
+</soap:Envelope>
+
+
+################
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/customer HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://customer.models/">
+    <soap:Body>
+        <x:deleteCustomer>
+            <arg0>53</arg0>
+        </x:deleteCustomer>
+    </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is Metro/3.0.0 (RELEASE-3.0.0-73b54f1; 2020-11-18T18:54:01+0000) JAXWS-RI/3.0.0 JAXWS-API/3.0.0 JAXB-RI/3.0.0 JAXB-API/3.0.0 git-revision#unknown. --><xs:schema xmlns:tns="http://order.models/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://order.models/">
+
+<xs:element name="addOrder" type="tns:addOrder"/>
+
+<xs:element name="addOrderResponse" type="tns:addOrderResponse"/>
+
+<xs:element name="customer" type="tns:customer"/>
+
+<xs:element name="getOrderById" type="tns:getOrderById"/>
+
+<xs:element name="getOrderByIdResponse" type="tns:getOrderByIdResponse"/>
+
+<xs:element name="getOrders" type="tns:getOrders"/>
+
+<xs:element name="getOrdersResponse" type="tns:getOrdersResponse"/>
+
+<xs:element name="orderPostRequest" type="tns:orderPostRequest"/>
+
+<xs:element name="oredr" type="tns:oredr"/>
+
+<xs:element name="productForOrder" type="tns:productForOrder"/>
+
+<xs:complexType name="getOrders">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getOrdersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:oredr" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="oredr">
+<xs:sequence>
+<xs:element name="createdAt" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="customer" type="tns:customer" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="submitted" type="xs:boolean"/>
+<xs:element name="totalPrice" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customer">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0"/>
+<xs:element name="creditLimit" type="xs:double"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="gender" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="interst" type="xs:string" minOccurs="0"/>
+<xs:element name="jop" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addOrder">
+<xs:sequence>
+<xs:element name="arg0" type="tns:orderPostRequest" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="orderPostRequest">
+<xs:sequence>
+<xs:element name="createdAt" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="customerId" type="xs:int"/>
+<xs:element name="products" type="tns:productForOrder" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productForOrder">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="orderQuantity" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addOrderResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getOrderById">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getOrderByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:oredr" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

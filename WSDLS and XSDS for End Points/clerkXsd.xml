@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is Metro/3.0.0 (RELEASE-3.0.0-73b54f1; 2020-11-18T18:54:01+0000) JAXWS-RI/3.0.0 JAXWS-API/3.0.0 JAXB-RI/3.0.0 JAXB-API/3.0.0 git-revision#unknown. --><xs:schema xmlns:tns="http://clerks.models/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://clerks.models/">
+
+<xs:element name="addClerk" type="tns:addClerk"/>
+
+<xs:element name="addClerkResponse" type="tns:addClerkResponse"/>
+
+<xs:element name="clerk" type="tns:clerk"/>
+
+<xs:element name="clerkPost" type="tns:clerkPost"/>
+
+<xs:element name="deleteClerk" type="tns:deleteClerk"/>
+
+<xs:element name="deleteClerkResponse" type="tns:deleteClerkResponse"/>
+
+<xs:element name="getClerkById" type="tns:getClerkById"/>
+
+<xs:element name="getClerkByIdResponse" type="tns:getClerkByIdResponse"/>
+
+<xs:element name="getClerkByName" type="tns:getClerkByName"/>
+
+<xs:element name="getClerkByNameResponse" type="tns:getClerkByNameResponse"/>
+
+<xs:element name="getClerks" type="tns:getClerks"/>
+
+<xs:element name="getClerksResponse" type="tns:getClerksResponse"/>
+
+<xs:element name="updateClerk" type="tns:updateClerk"/>
+
+<xs:element name="updateClerkResponse" type="tns:updateClerkResponse"/>
+
+<xs:complexType name="deleteClerk">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteClerkResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateClerk">
+<xs:sequence>
+<xs:element name="arg0" type="tns:clerk" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clerk">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateClerkResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addClerk">
+<xs:sequence>
+<xs:element name="arg0" type="tns:clerkPost" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clerkPost">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addClerkResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClerks">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getClerksResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:clerk" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClerkByName">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClerkByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:clerk" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClerkById">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClerkByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:clerk" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

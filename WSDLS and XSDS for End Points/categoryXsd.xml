@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is Metro/3.0.0 (RELEASE-3.0.0-73b54f1; 2020-11-18T18:54:01+0000) JAXWS-RI/3.0.0 JAXWS-API/3.0.0 JAXB-RI/3.0.0 JAXB-API/3.0.0 git-revision#unknown. --><xs:schema xmlns:tns="http://category.models/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://category.models/">
+
+<xs:element name="addCategory" type="tns:addCategory"/>
+
+<xs:element name="addCategoryResponse" type="tns:addCategoryResponse"/>
+
+<xs:element name="category" type="tns:category"/>
+
+<xs:element name="deleteCategory" type="tns:deleteCategory"/>
+
+<xs:element name="deleteCategoryResponse" type="tns:deleteCategoryResponse"/>
+
+<xs:element name="getCategories" type="tns:getCategories"/>
+
+<xs:element name="getCategoriesResponse" type="tns:getCategoriesResponse"/>
+
+<xs:element name="getCategoryById" type="tns:getCategoryById"/>
+
+<xs:element name="getCategoryByIdResponse" type="tns:getCategoryByIdResponse"/>
+
+<xs:element name="getCategoryByName" type="tns:getCategoryByName"/>
+
+<xs:element name="getCategoryByNameResponse" type="tns:getCategoryByNameResponse"/>
+
+<xs:element name="updateCategory" type="tns:updateCategory"/>
+
+<xs:element name="updateCategoryResponse" type="tns:updateCategoryResponse"/>
+
+<xs:complexType name="updateCategory">
+<xs:sequence>
+<xs:element name="arg0" type="tns:category" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="category">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCategoryResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCategories">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCategoriesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:category" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCategoryById">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCategoryByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:category" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCategory">
+<xs:sequence>
+<xs:element name="arg0" type="tns:category" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCategoryResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCategory">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCategoryResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCategoryByName">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCategoryByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:category" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

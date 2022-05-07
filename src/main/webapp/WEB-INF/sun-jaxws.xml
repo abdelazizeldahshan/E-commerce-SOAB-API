@@ -1,0 +1,33 @@
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+
+    <endpoint
+        name="adminService"
+        implementation="models.admin.AdminServiceImplemention"
+        url-pattern="/ws/admin" />
+
+    <endpoint
+        name="categoryService"
+        implementation="models.category.CategoryServiceImplemention"
+        url-pattern="/ws/category" />
+
+    <endpoint
+        name="clerkService"
+        implementation="models.clerks.ClerkServiceImplemention"
+        url-pattern="/ws/clerk" />
+
+    <endpoint
+        name="customerService"
+        implementation="models.customer.CustomerServiceImplemention"
+        url-pattern="/ws/customer" />
+
+    <endpoint
+        name="orderService"
+        implementation="models.order.OrdersServicImplemention"
+        url-pattern="/ws/order" />
+
+    <endpoint
+        name="productService"
+        implementation="models.products.ProductServiceImplemention"
+        url-pattern="/ws/product" />
+
+</endpoints>

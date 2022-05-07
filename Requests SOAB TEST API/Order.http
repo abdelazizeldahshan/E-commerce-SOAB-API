@@ -1,0 +1,54 @@
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/order HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://order.models/">
+    <soap:Body>
+        <x:getOrders>
+        </x:getOrders>
+    </soap:Body>
+</soap:Envelope>
+
+##############'
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/order HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://order.models/">
+    <soap:Body>
+        <x:getOrderById>
+            <arg0>1</arg0>
+        </x:getOrderById>
+    </soap:Body>
+</soap:Envelope>
+
+
+###################
+
+POST http://localhost:9595/SOAB-E-Commerce-API/ws/order HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:x="http://order.models/">
+    <soap:Body>
+        <x:addOrder>
+            <arg0>
+                <createdAt>2022-04-25T00:00:00+02:00</createdAt>
+                <customerId>49</customerId>
+                <products>
+                    <id>1</id>
+                    <name>productName</name>
+                    <orderQuantity>9</orderQuantity>
+                </products>
+                <products>
+                    <id>13</id>
+                    <name>food</name>
+                    <orderQuantity>9</orderQuantity>
+                </products>
+            </arg0>
+        </x:addOrder>
+    </soap:Body>
+</soap:Envelope>

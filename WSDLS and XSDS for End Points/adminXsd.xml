@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is Metro/3.0.0 (RELEASE-3.0.0-73b54f1; 2020-11-18T18:54:01+0000) JAXWS-RI/3.0.0 JAXWS-API/3.0.0 JAXB-RI/3.0.0 JAXB-API/3.0.0 git-revision#unknown. --><xs:schema xmlns:tns="http://admin.models/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://admin.models/">
+
+<xs:element name="addAdmin" type="tns:addAdmin"/>
+
+<xs:element name="addAdminResponse" type="tns:addAdminResponse"/>
+
+<xs:element name="admin" type="tns:admin"/>
+
+<xs:element name="adminPost" type="tns:adminPost"/>
+
+<xs:element name="deleteAdmin" type="tns:deleteAdmin"/>
+
+<xs:element name="deleteAdminResponse" type="tns:deleteAdminResponse"/>
+
+<xs:element name="getAdminById" type="tns:getAdminById"/>
+
+<xs:element name="getAdminByIdResponse" type="tns:getAdminByIdResponse"/>
+
+<xs:element name="getAdmins" type="tns:getAdmins"/>
+
+<xs:element name="getAdminsResponse" type="tns:getAdminsResponse"/>
+
+<xs:element name="updateAdmin" type="tns:updateAdmin"/>
+
+<xs:element name="updateAdminResponse" type="tns:updateAdminResponse"/>
+
+<xs:complexType name="updateAdmin">
+<xs:sequence>
+<xs:element name="arg0" type="tns:admin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="admin">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAdmin">
+<xs:sequence>
+<xs:element name="arg0" type="tns:adminPost" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="adminPost">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAdmin">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAdminById">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAdminByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:admin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAdmins">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAdminsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:admin" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
