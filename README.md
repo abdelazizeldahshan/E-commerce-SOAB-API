@@ -2,12 +2,12 @@
 
 E-commerce Api with 6 resources documented By [postman](https://www.postman.com/")
 --------------
-* Admin
-* Customer
-* Clerk
-* Product
-* Order
-* Categories
+* [Admin](https://documenter.getpostman.com/view/20705929/UyxdL9gc)
+* [Customer](https://documenter.getpostman.com/view/20705929/UyxdL9cK)
+* [Clerk](https://documenter.getpostman.com/view/20705929/UyxdL9cL)
+* [Product](https://documenter.getpostman.com/view/20705929/UyxdL9cG)
+* [Order](https://documenter.getpostman.com/view/20705929/UyxdL9cJ)
+* [Categories](https://documenter.getpostman.com/view/20705929/UyxdL9gb)
 
 ----------------------------------------------------------------------------
 Development Tools
